@@ -1,0 +1,35 @@
+name: CI Workflow
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    container:
+      image: node:14.15.0-alpine
+    steps:
+      - uses: actions/checkout@v1
+      - name: Tests
+        run: |
+          npm install
+          npm run test
+  lint:
+    runs-on: ubuntu-latest
+    container:
+      image: node:14.15.0-alpine
+    steps:
+      - uses: actions/checkout@v1
+      - name: Lint
+        run: |
+          npm install
+          npm run lint
+  audit:
+    runs-on: ubuntu-latest
+    container:
+      image: node:14.15.0-alpine
+    steps:
+      - uses: actions/checkout@v1
+      - name: Audit
+        run: |
+          npm install
+          npm audit --audit-level=moderate
