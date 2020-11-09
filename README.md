@@ -10,5 +10,5 @@ source dev.sh
 dkup
 
 # Access localhost
-[http://localhost:3000](http://localhost:3000)
+http://localhost:3000
 ```
