@@ -1,20 +1,14 @@
 # ronconi-libras-front
 
-## Build Setup
+## Development environment setup with Docker
 
 ```bash
-# install dependencies
-$ npm install
+# Run script
+source dev.sh
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+# Run dkup to build and run container application
+dkup
 
-# build for production and launch server
-$ npm run build
-$ npm run start
-
-# generate static project
-$ npm run generate
+# Access localhost
+[http://localhost:3000](http://localhost:3000)
 ```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
